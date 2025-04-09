@@ -1,0 +1,3618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAYANS OGLAND</title>
+    <link rel="icon" href="image/logos.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+:root{
+    --body-color: linear-gradient(to right, #ccd9ff, #cce0ff);
+    --container-color: linear-gradient(to right bottom, rgba(255,255,255,.5), rgba(255,255,255,.4));
+    --f1-color: #000;
+    --f2-color: #808080;
+    --f3-color: #fff;
+    --f4-color: #009933;
+    --f5-color: #ff66b3;
+    --f6-color: #ff99cc;
+    --f7-color: rgba(104, 80, 80, 0.137);
+    --f8-color: rgba(49, 48, 48, 0.5);
+    --f9-color: #bb99ff;
+    --f10-color: #c2d6d6;
+    --main-color:#aa650a;
+    --box-shadow:0 5rem 10rem rgba(0, 0, 0, 0.432);
+}
+header{
+    width: 1140px;
+    max-width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header img{
+     position: relative;
+     margin-top: 100%;
+     width: 95px;
+     height: 75px;
+     left: -200%;
+     opacity: .5;
+}
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item .error{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item .error h1{
+    text-align: center;
+    justify-content: center;
+}
+.carousel .list .item .cpright{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item .cpright h1{
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(92, 92, 92, 0.607);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    margin-left: 35%;
+    margin-right: 35%;
+    border-radius: 15px;
+    color: #1c1c1c;
+}
+.carousel .list .item .cpright span{
+    color: orange;
+}
+
+.carousel .list .item .update{
+    width: 20%;
+    height: 100%;
+    margin-left: 40%;
+    position: absolute;
+    inset: 0 0 0 0;
+    animation: float-up-down2 5s linear infinite both;
+    animation-duration: 30s;
+    animation-delay: 2s!important;
+}
+@keyframes float-up-down2 {
+    0% {
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+
+    50% {
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+
+    60% {
+        -webkit-transform: translateY(10%);
+        transform:translateY(10%)
+    }
+
+    90% {
+        -webkit-transform: translateY(100%);
+        transform:translateY(100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(1%);
+        transform:translateY(1%);
+    }
+}
+.carousel .list .item .update span{
+    color: orange;
+    text-shadow: #aa650a 5px 0 10px;
+}
+.carousel .list .item .update h1{
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(92, 92, 92, 0.607);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    margin-top: 55rem;
+    margin-left: 28%;
+    margin-right: 28%;
+    border-radius: 15px;
+    color: #1c1c1c;
+}
+.carousel .list .item .observator{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0 0 0 0;
+    opacity: 0;
+    margin-top: -5rem;
+    animation: fadehome .5s linear 1 forwards;
+    filter: blur(50px);
+}
+@keyframes fadehome{
+    to{
+    margin-top: 0rem;
+    opacity: 1;
+    filter: blur(2px);}
+}
+
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .imgpack{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: orange;
+    text-shadow: #000000d6 5px 0 10px;
+}
+.carousel .list .item .authorp{
+    margin-top: -5rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: orange;
+    text-shadow: #000000d6 5px 0 10px;
+}
+.carousel .list .item .authorev{
+    margin-top: -7rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: orange;
+    text-shadow: #000000d6 5px 0 10px;
+}
+.carousel .list .item .undertitle{
+    position: absolute;
+    margin-left: 0rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: orange;
+    text-shadow: #000000d6 5px 0 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+    text-shadow: #000000d6 5px 0 10px;
+}
+.carousel .list .item .topic{
+    color: gray;
+}
+.carousel .list .item .tvan{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.carousel .list .item .tvan img{
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+    margin-top: -19.8rem;
+    margin-left: -24.5rem;
+}
+.carousel .list .item .des{
+display: flex;
+     width: 150%;
+     font-size: 1.2rem;
+     color: rgb(221, 155, 31);
+     font-weight: bold;
+     text-shadow: #000 5px 0 10px;
+     background-color: rgba(128, 128, 128, 0.371);
+     padding: 15px;
+     border-radius: 15px;
+     border: 2px solid rgba(160, 160, 160, 0.338);
+}
+.carousel .list .item .desev{
+    position: absolute;
+     margin-left: 48rem;
+     margin-top: -15%;
+     color: orange;
+     font-size: 2rem;
+     font-weight: bold;
+     width: 30%;
+     text-shadow: #000 5px 0 10px;
+     padding: 15px;
+     border-radius: 15px;
+     background-color: rgba(128, 128, 128, 0.371);
+     border: 2px solid rgba(160, 160, 160, 0.338);
+     cursor: pointer;
+}
+.carousel .list .item .desang{
+     color: orange;
+     font-size: 15px;
+     font-weight: bold;
+     width: 70%;
+     text-shadow: #000 2px 0 5px;
+     padding: 15px;
+     border-radius: 15px;
+     background-color: rgba(128, 128, 128, 0.371);
+     border: 2px solid rgba(160, 160, 160, 0.338);
+}
+.carousel .list .item .desang span{
+     color: rgb(226, 35, 35);
+     font-size: 15px;
+     font-weight: bold;
+     text-shadow: #000 2px 0 5px;
+}
+.carousel .list .item .ls img{
+    position: relative;
+    display: flex;
+    width: 35vh;
+    height: 25vh;
+    top: 10px;
+    left: 2.5rem;
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    border-radius: 15px;
+    transition: .3s;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+.carousel .list .item video{
+    width: 100%;
+    margin-top: -4%;
+    filter: blur(10px) grayscale(75%);
+}
+.carousel .list .item .videoab{
+    width: 130%;
+    height: 130%;
+    margin-top: -8%;
+    margin-left: -15%;
+    filter: blur(10px) grayscale(75%);
+}
+.carousel .list .item .content .box{
+    display: grid;
+    margin-left: -5rem;
+    margin-top: -1rem;
+    padding-top: 5rem;
+    width: 80rem;
+    height: 39rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-auto-rows: minmax(13rem, max-content);
+    grid-gap: 5rem;
+    grid-row-gap: 7rem;
+    overflow-y: scroll;
+}
+.carousel .list .item .content .box::-webkit-scrollbar{
+    width: 2rem;
+    color: var(--main-color);
+}
+.carousel .list .item .content .box::-webkit-scrollbar-thumb{
+    width: 2rem;
+    color: var(--main-color);
+}
+.carousel .list .item .content .box .itemcard{
+    display: grid;
+    position: relative;
+    top: 4rem;
+    background-color: rgba(128, 128, 128, 0.371);
+    border: 2px solid rgba(67, 67, 67, 0.548);
+    border-radius: 3rem;
+    transition: .3s;
+}
+.carousel .list .item .content .box .itemcard:hover{
+    transform: translateY(-15px);
+    background-color: rgba(63, 63, 63, 0.371);
+    border: 2px solid rgba(163, 163, 163, 0.933);
+}
+.carousel .list .item .content .box .itemcard img{
+    position: absolute;
+    left: 31%;
+    top: -4rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+.carousel .list .item .content .box .itemcard:hover img{
+    transition: .3s;
+    transform: scale(1.2);
+}
+.carousel .list .item .content .box .itemcard h2{
+color: orange;
+text-align: center;
+margin-top: 3rem;
+font-size: 23px;
+width: 100%;
+font-weight: 650;
+cursor: pointer;
+transition: .2s;
+animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+}
+.carousel .list .item .content .box .itemcard:hover h2{
+    text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+    transition: .2s;
+}
+.carousel .list .item .content .box .itemcard p{
+width: 50%;
+font-weight: 550;
+height: fit-content;
+color: rgb(8, 92, 8);
+padding: 1px;
+text-align: center;
+text-shadow: green 5px 0 10px;
+margin-top: -2.3rem;
+margin-left: 25%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(8, 123, 8, 0.59);
+border-radius: 15px;
+cursor: pointer;
+}
+.carousel .list .item .content .box .itemcard h3{
+width: 50%;
+font-weight: 550;
+height: fit-content;
+color: rgb(7, 186, 226);
+padding: 1px;
+text-align: center;
+text-shadow: rgb(0, 105, 175) 5px 0 10px;
+margin-top: -2.3rem;
+margin-left: 25%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(30, 164, 236, 0.59);
+border-radius: 15px;
+cursor: pointer;
+}
+.carousel .list .item .content .box .itemcard h1{
+width: 50%;
+height: fit-content;
+color: #b0210e;
+font-weight: 550;
+padding: 3px;
+text-align: center;
+text-shadow: rgb(145, 29, 6) 5px 0 10px;
+margin-top: -2.3rem;
+margin-left: 25%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid #de1a00;
+border-radius: 15px;
+cursor: pointer;
+}
+.carousel .list .item .content .box .itemcard .infom{
+width: 35%;
+height: fit-content;
+color: orange;
+font-weight: 550;
+padding: 4px;
+text-align: center;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+margin-left: 32%;
+margin-top: -10%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+transition: .3s;
+}
+.carousel .list .item .content .box .itemcard .infom:hover{
+    background-color: rgba(60, 60, 60, 0.371);
+    transition: .3s;
+    transform: scale(1.015);
+}
+
+.carousel .list .item .content .box .itemcard .infom:active{
+    transform: scale(0.8);
+}
+
+
+.carousel .list .item .content .box .itemcardmc{
+    display: grid;
+    position: relative;
+    top: 4rem;
+    background-color: rgba(128, 128, 128, 0.371);
+    border: 2px solid rgba(255, 140, 0, 0.42);
+    border-radius: 3rem;
+    transition: .3s;
+}
+.carousel .list .item .content .box .itemcardmc:hover{
+    transform: translateY(-15px);
+    background-color: rgba(63, 63, 63, 0.371);
+    border: 2px solid rgba(255, 140, 0, 0.808);
+}
+.carousel .list .item .content .box .itemcardmc img{
+    position: absolute;
+    left: 31%;
+    top: -4rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 20px;
+    transition: .3s;
+    cursor: pointer;
+    border: 2px solid rgba(255, 140, 0, 0.561);
+}
+.carousel .list .item .content .box .itemcardmc:hover img{
+    transition: .3s;
+    transform: scale(1.2);
+}
+.carousel .list .item .content .box .itemcardmc h2{
+color: orange;
+text-align: center;
+margin-top: 3rem;
+font-size: 23px;
+width: 100%;
+font-weight: 650;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+cursor: pointer;
+animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+}
+.carousel .list .item .content .box .itemcardmc p{
+width: 50%;
+font-weight: 550;
+height: fit-content;
+color: rgb(8, 92, 8);
+padding: 1px;
+text-align: center;
+text-shadow: green 5px 0 10px;
+margin-top: -2.3rem;
+margin-left: 25%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(8, 123, 8, 0.59);
+border-radius: 15px;
+cursor: pointer;
+}
+.carousel .list .item .content .box .itemcardmc h3{
+    width: 50%;
+font-weight: 550;
+height: fit-content;
+color: rgb(7, 186, 226);
+padding: 1px;
+text-align: center;
+text-shadow: rgb(0, 105, 175) 5px 0 10px;
+margin-top: -2.3rem;
+margin-left: 25%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(30, 164, 236, 0.59);
+border-radius: 15px;
+cursor: pointer;
+}
+.carousel .list .item .content .box .itemcardmc .infom{
+width: 35%;
+height: fit-content;
+color: orange;
+font-weight: 550;
+padding: 4px;
+text-align: center;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+margin-left: 32%;
+margin-top: -10%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+transition: .3s;
+}
+.carousel .list .item .content .box .itemcardmc .infom:hover{
+    background-color: rgba(60, 60, 60, 0.371);
+    transition: .3s;
+    transform: scale(1.015);
+}
+
+.carousel .list .item .content .box .itemcardmc .infom:active{
+    transform: scale(0.8);
+}
+.carousel .list .item .content .box .itemcardmc .star img{
+position: absolute;
+width: 25px;
+height: 25px;
+top: -25px;
+margin-left: -4rem;
+border: none;
+opacity: 0;
+transition: .3s;
+filter: blur(10px);
+}
+.carousel .list .item .content .box .itemcardmc:hover .star img{
+    transform: rotate(60deg);
+    filter: blur(0px);
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    transition: .3s;
+}
+
+.carousel .list .item .content .box .itemcardmc .stars img{
+position: absolute;
+width: 55px;
+height: 55px;
+top: 8px;
+margin-left: 4.5rem;
+border: none;
+opacity: 0;
+transition: .3s;
+filter: blur(10px);
+}
+.carousel .list .item .content .box .itemcardmc:hover .stars img{
+    transform: rotate(-300deg);
+    opacity: .8;
+    width: 80px;
+    height: 80px;
+    transition: .3s;
+    filter: blur(0px);
+}
+/*itemcardta*/
+
+.carousel .list .item .content .box .itemcardta{
+    display: grid;
+    position: relative;
+    top: 4rem;
+    background-color: rgba(128, 128, 128, 0.371);
+    border: 2px solid rgba(16, 197, 0, 0.42);
+    border-radius: 3rem;
+    transition: .3s;
+}
+.carousel .list .item .content .box .itemcardta:hover{
+    transform: translateY(-15px);
+    background-color: rgba(63, 63, 63, 0.371);
+    border: 2px solid rgba(47, 200, 1, 0.808);
+}
+.carousel .list .item .content .box .itemcardta img{
+    position: absolute;
+    left: 31%;
+    top: -4rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 20px;
+    transition: .3s;
+    cursor: pointer;
+    border: 2px solid rgba(16, 197, 0, 0.42);
+}
+.carousel .list .item .content .box .itemcardta:hover img{
+    transition: .3s;
+    transform: scale(1.2);
+}
+.carousel .list .item .content .box .itemcardta h2{
+color: rgba(30, 203, 30, 0.663);
+text-align: center;
+margin-top: 3rem;
+font-size: 23px;
+width: 100%;
+font-weight: 650;
+text-shadow: rgba(36, 222, 7, 0.839) 5px 0 10px;
+cursor: pointer;
+animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+}
+.carousel .list .item .content .box .itemcardta p{
+width: 50%;
+font-weight: 550;
+height: fit-content;
+color: rgb(8, 92, 8);
+padding: 1px;
+text-align: center;
+text-shadow: green 5px 0 10px;
+margin-top: -2.3rem;
+margin-left: 25%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(8, 123, 8, 0.59);
+border-radius: 15px;
+cursor: pointer;
+}
+.carousel .list .item .content .box .itemcardta h3{
+width: 50%;
+font-weight: 550;
+height: fit-content;
+color: rgb(7, 186, 226);
+padding: 1px;
+text-align: center;
+text-shadow: rgb(0, 105, 175) 5px 0 10px;
+margin-top: -2.3rem;
+margin-left: 25%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(30, 164, 236, 0.59);
+border-radius: 15px;
+cursor: pointer;
+}
+.carousel .list .item .content .box .itemcardta .infom{
+width: 35%;
+height: fit-content;
+color: orange;
+font-weight: 550;
+padding: 4px;
+text-align: center;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+margin-left: 32%;
+margin-top: -10%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+transition: .3s;
+}
+.carousel .list .item .content .box .itemcardta .infom:hover{
+    background-color: rgba(60, 60, 60, 0.371);
+    transition: .3s;
+    transform: scale(1.015);
+}
+
+.carousel .list .item .content .box .itemcardta .infom:active{
+    transform: scale(0.8);
+}
+.carousel .list .item .content .box .itemcardta .ttw img{
+position: absolute;
+width: auto;
+height: 40px;
+top: 1.4rem;
+margin-left: 1rem;
+border: none;
+opacity: 0;
+transition: .3s;
+transform: scaleX(1);
+filter: blur(10px);
+}
+.carousel .list .item .content .box .itemcardta:hover .ttw img{
+margin-left: 1rem;
+top: 3rem;
+transition: .3s;
+opacity: .7;
+filter: blur(0px);
+}
+
+.carousel .list .item .content .box .itemcardta .cpb img{
+position: absolute;
+width: auto;
+height: 30px;
+align-items: center;
+justify-content: center;
+top: 1rem;
+margin-left: 6.3rem;
+border: none;
+opacity: 0;
+transition: .3s;
+filter: blur(10px);
+}
+.carousel .list .item .content .box .itemcardta:hover .cpb img{
+    top: 2rem;
+    margin-left: 6.3rem;
+    filter: blur(0px);
+    width: auto;
+    height: 50px;
+    transition: .3s;
+    opacity: .7;
+}
+
+.carousel .list .item .content .box .itemcardta .cpb2 img{
+position: absolute;
+width: auto;
+height: 58px;
+align-items: center;
+justify-content: center;
+top: 1rem;
+margin-left: -3.5rem;
+border: none;
+opacity: 0;
+transition: .3s;
+transform: rotate(330deg);
+filter: blur(10px);
+}
+.carousel .list .item .content .box .itemcardta:hover .cpb2 img{
+    top: 1.8rem;
+    margin-left: -3.5rem;
+    filter: blur(0px);
+    transition: .3s;
+    opacity: .7;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    margin-bottom: 0rem;
+    margin-left: -1rem;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.72) 5px 5px 5px 5px;
+    border: 2px solid rgba(255, 166, 0, 0.586);
+    border-radius: 20px;
+    filter: blur(2px);
+    opacity: .5;
+    animation: showContent .3s .3s linear 1 forwards;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+@keyframes fade{
+    to{
+        opacity: 1;
+    }
+}
+.thumbnail .item h1{
+    margin-left: -0.15rem;
+    width: 87.5%;
+    align-items: center;
+    padding: 8px;
+    padding-bottom: 35px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: orange;
+    text-shadow: rgba(255, 166, 0, 0.72) 2px 0 5px;
+    background-color: rgb(26, 26, 26);
+    border: 2px solid rgba(255, 166, 0, 0.663);
+    bottom: -0.6rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    transition: .5s;
+    animation: fadeInDown 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.thumbnail .item p{
+    color: #fff;
+    position: absolute;
+    bottom: 0.5rem;
+    margin-left: 8%;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: #ffffffab 2px 0 5px;
+    font-weight: bold;
+    transform: translateY(-20px);
+}
+.thumbnail .item:hover h1{
+    opacity: .9;
+    transition: .4s;
+    transform: translateY(0);
+}
+.thumbnail .item:hover p{
+    opacity: .9;
+    transition: .4s;
+    transform: translateY(0);
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    margin-right: 0.7%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: 1px solid rgba(255, 166, 0, 0.663);
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    animation: fadeup .2s linear 1 forwards;
+    margin-top: 2rem;
+    filter: blur(5px);
+    opacity: 0;
+    text-shadow: orange 5px 0 10px;
+    transition: .2s;
+}
+
+@keyframes fadeup{
+    to{
+        margin-top: 0rem;
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.arrows button:hover{
+    transition: .3s;
+    border: 1px solid rgb(105, 70, 5);
+    background-color: rgba(60, 60, 60, 0.371);
+    color: rgba(116, 116, 116, 0.66);
+}
+.arrows button:active{
+    transform: scale(0.8);
+}
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .authorp,
+.carousel .list .item:nth-child(1) .content .authorev,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .desev,
+.carousel .list .item:nth-child(1) .content .undertitle,
+.carousel .list .item:nth-child(1) .content .desang,
+.carousel .list .item:nth-child(1) .content .ls img,
+.carousel .list .item:nth-child(1) .content .desang img,
+.carousel .list .item:nth-child(1) .content .buttons,
+.carousel .list .item:nth-child(1) .content .tvan img,
+.carousel .list .item:nth-child(1) .content .box,
+.carousel .list .item:nth-child(1) .content .box .itemcard,
+.carousel .list .item:nth-child(1) .content .box .itemcardmc,
+.carousel .list .item:nth-child(1) .content .box .itemcardta,
+.carousel .list .item:nth-child(1) .cpright h1,
+.carousel .list .item:nth-child(1) .cpright,
+.carousel .list .item:nth-child(1) .update h1,
+.item:nth-child(1) .contact-inputs,
+.item:nth-child(1) .contact-container,
+.item:nth-child(1) .container,
+.item:nth-child(1) .contact-containerp,
+.item:nth-child(1) .containerp,
+.item:nth-child(1) .card,
+.item:nth-child(1) .products-preview .preview,
+.item:nth-child(1) .products-preview .preview img,
+.item:nth-child(1) .products-preview-tv .preview-tv,
+.item:nth-child(1) .products-preview-tv .preview-tv img,
+.item:nth-child(1) .products-preview-m .preview-m,
+.item:nth-child(1) .products-preview-m .preview-m img,
+.item:nth-child(1) .products-prev-eve .prev-eve,
+.item:nth-child(1) .products-prev-eve .prev-eve img
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .2s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .desev{
+     animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .undertitle{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .desang{
+     animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .ls img{
+     animation-delay: 2.5s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1s!important;
+}
+.carousel .list .item:nth-child(1) .content .tvan img{
+    animation-delay: 2s!important;
+}
+.item:nth-child(2) .contact-inputs{
+    animation-delay: 1s!important;
+}
+.item:nth-child(2) .contact-container{
+    animation-delay: 2s!important;
+}
+.item:nth-child(1) .contact-container{
+    animation-delay: 2s!important;
+}
+.item:nth-child(2) .container{
+    animation-delay: 1s!important;
+}
+.item:nth-child(2) .car{
+    animation-delay: 1s!important;
+}
+.contact-containerp{
+    animation-delay: 1.5s!important;
+}
+.containerp{
+    animation-delay: 2s!important;
+}
+.carousel .list .item .observator{
+    animation-delay: .3s!important;
+}
+.arrows button{
+    animation-delay: 1s!important;
+}
+.carousel .list .item .content .undertitle{
+    animation-delay: 1.6s!important;
+}
+.item:nth-child(2) .products-preview .preview{
+    animation-delay: 1.5s!important;
+}
+.item:nth-child(1) .products-preview .preview{
+    animation-delay: .2s!important;
+}
+.item:nth-child(1) .products-preview .preview img{
+    animation-delay: .5s!important;
+}
+.item:nth-child(1) .products-preview-tv .preview-tv{
+    animation-delay: .2s!important;
+}
+.item:nth-child(2) .products-preview-tv .preview-tv{
+    animation-delay: 1.5s!important;
+}
+.item:nth-child(1) .products-preview-tv .preview-tv img{
+    animation-delay: .5s!important;
+}
+.item:nth-child(2) .products-preview-m .preview-m{
+    animation-delay: 1.5s!important;
+}
+.item:nth-child(1) .products-preview-m .preview-m{
+    animation-delay: .2s!important;
+}
+.item:nth-child(1) .products-preview-m .preview-m img{
+    animation-delay: .5s!important;
+}
+.item:nth-child(2) .products-prev-eve .prev-eve{
+    animation-delay: 1.5s!important;
+}
+.item:nth-child(1) .products-prev-eve .prev-eve{
+    animation-delay: .2s!important;
+}
+.item:nth-child(1) .products-prev-eve .prev-eve img{
+    animation-delay: .5s!important;
+}
+.carousel .list .item:nth-child(1) .content .box .itemcard{
+    animation-delay: 2s!important;
+}
+.carousel .list .item:nth-child(2) .content .box .itemcard{
+    animation-delay: 2s!important;
+}
+.carousel .list .item:nth-child(1) .content .box .itemcardmc{
+    animation-delay: 2s!important;
+}
+.carousel .list .item:nth-child(2) .content .box .itemcardmc{
+    animation-delay: 2s!important;
+}
+.carousel .list .item:nth-child(1) .content .box .itemcardta{
+    animation-delay: 2s!important;
+}
+.carousel .list .item:nth-child(2) .content .box .itemcardta{
+    animation-delay: 2s!important;
+}
+.carousel .list .item:nth-child(1) .content .box{
+    animation-delay: 2s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .4s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .3s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+        filter: blur(2px);
+    }
+}
+
+/* running time */
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 2s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: .5;
+    animation: showThumbnail 1.5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .authorp,
+.carousel.prev .list .item:nth-child(2) .content .authorev,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .desev,
+.carousel.prev .list .item:nth-child(2) .content .undertitle,
+.carousel.prev .list .item:nth-child(2) .content .desang,
+.carousel.prev .list .item:nth-child(2) .content .desang img,
+.carousel.prev .list .item:nth-child(2) .content .ls img,
+.carousel.prev .list .item:nth-child(2) .content .buttons,
+.carousel.prev .list .item:nth-child(2) .content .tvan img,
+.carousel.prev .list .item:nth-child(2) .content .box,
+.carousel.prev .list .item:nth-child(2) .content .box .itemcard,
+.carousel.prev .list .item:nth-child(2) .content .box .itemcardmc,
+.carousel.prev .list .item:nth-child(2) .content .box .itemcardta,
+.carousel.prev .list .item:nth-child(2) .cpright h1,
+.carousel.prev .list .item:nth-child(2) .cpright,
+.carousel.prev .list .item:nth-child(2) .update,
+.item:nth-child(2) .contact-inputs,
+.item:nth-child(2) .contact-container,
+.item:nth-child(2) .container,
+.item:nth-child(2) .contact-containerp,
+.item:nth-child(2) .containerp,
+.item:nth-child(2) .card,
+.item:nth-child(2) .products-preview .preview,
+.item:nth-child(2) .products-preview-tv .preview-tv,
+.item:nth-child(2) .products-preview-m .preview-m,
+.item:nth-child(2) .products-preview-m .preview-m img,
+.item:nth-child(2) .products-prev-eve .prev-eve
+
+{
+    animation: contentOut 2s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .carousel{
+        visibility: hidden;
+    }
+    .carousel .list .item .error{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+    visibility: visible;
+    background-color: #444;
+    }
+    .carousel .list .item .error h1{
+    text-align: center;
+    justify-content: center;
+    visibility: visible;
+    background-color: rgba(92, 92, 92, 0.607);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    margin-top: 25%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 15px;
+    color: #d3d3d3;
+    }
+    .carousel .list .item .error h1 span{
+        color: rgb(235, 20, 20);
+    }
+}
+@media screen and (min-width: 1005px) {
+    .carousel .list .item .error h1{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 1925px) {
+    .products-preview-tv{
+   position: relative;
+   top: -2.5rem; left: 5%;
+   min-height: 100vh;
+   width: 185%;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   }
+
+   .products-preview-tv .preview-tv{
+   display: none;
+   padding:2rem;
+   background-color: rgba(80, 80, 80, 0.674);
+   border: 2px solid rgba(160, 160, 160, 0.338);
+   border-radius: 5px;
+   position: relative;
+   margin:2rem;
+   width: 100%;
+   padding-left: 4rem;
+   padding-right: 4rem;
+   }
+   .products-preview-tv .preview-tv.active{
+   display: inline-block;
+   }
+
+   .products-preview-tv .preview-tv img{
+   margin-top: -25%;
+   max-height: 130rem;
+   max-width: 150rem;
+   border: 2px solid rgba(68, 68, 68, 0.748);
+   animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+   box-shadow: rgba(0, 0, 0, 0.476) 5px 5px 10px;
+   }
+
+   .products-preview-tv .preview-tv .fa-times{
+   position: absolute;
+   top:.5rem; right: 1rem;
+   cursor: pointer;
+   color:#c72323;
+   font-size: 2rem;
+   transition: .3s;
+   }
+   .products-preview-tv .preview-tv .fa-times:hover{
+   color: orange;
+   transition: .3s;
+   }
+     .thumbnail{
+          position: absolute;
+          bottom: 10%;
+          left: 85%;
+          width: max-content;
+          z-index: 100;
+          display: flex;
+          gap: 20px;
+      }
+      .thumbnail .item{
+          width: 130px;
+          height: 200px;
+          flex-shrink: 0;
+          position: relative;
+      }
+      .thumbnail .item img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+      }
+      .arrows{
+          position: absolute;
+          top: 91%;
+          right: -1.65%;
+          z-index: 100;
+          width: 300px;
+          max-width: 30%;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+      }
+      .containerp{
+        position: absolute;
+        top: -10rem;
+    }
+
+    .products-preview{
+   position: relative;
+   top: -15rem; left: 50%;
+   min-height: 100vh;
+   width: 100%;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   }
+
+   .products-preview .preview{
+   display: none;
+   padding:2rem;
+   text-align: center;
+   background-color: rgba(92, 92, 92, 0.607);
+   border: 2px solid rgba(160, 160, 160, 0.338);
+   border-radius: 15px;
+   position: relative;
+   margin:2rem;
+   width: 60rem;
+   }
+   .products-preview .preview.active{
+   display: inline-block;
+   }
+
+   .products-preview .preview img{
+   margin-top: -25%;
+   max-height: 20rem;
+   max-width: 20rem;
+   border-radius: 15px;
+   border: 2px solid rgba(68, 68, 68, 0.748);
+   animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+   box-shadow: rgba(0, 0, 0, 0.476) 5px 5px 10px;
+   }
+
+   .products-preview .preview .fa-times{
+   position: absolute;
+   top:.5rem; right: 1rem;
+   cursor: pointer;
+   color:#444;
+   font-size: 2rem;
+   transition: .3s;
+   }
+   .products-preview .preview .fa-times:hover{
+   color: orange;
+   transition: .3s;
+   }
+   .products-preview .preview h3{
+   padding: .2rem 0;
+   color: orange;
+   font-size: 2.5rem;
+   letter-spacing: 3px;
+   text-shadow: rgba(255, 166, 0, 0.498) 0 5px 10px;
+   cursor: pointer;
+   }
+
+   .products-preview .preview p{
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: orange;
+    text-shadow: rgba(255, 166, 0, 0.683) 5px 5px 10px;
+    cursor: pointer;
+    text-align: start;
+    margin-left: 5%;
+   }
+
+   .products-preview .preview .price{
+   margin-left: 25%;
+   width: 13rem;
+   text-align: center;
+   align-items: center;
+   font-size: 2.5rem;
+   font-weight: 550;
+   padding: .5rem;
+   color:#27ae60;
+   text-shadow: green 5px 5px 10px;
+   border-radius: 20px;
+   cursor: pointer;
+   }
+   .products-preview .preview span{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color:#27ae60;
+    text-shadow: green 5px 5px 10px;
+    text-align: start;
+   }
+
+   .products-preview-m{
+   position: relative;
+   top: -15rem; left: 50%;
+   min-height: 100vh;
+   width: 100%;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   }
+
+   .products-preview-m .preview-m{
+   display: none;
+   padding:2rem;
+   text-align: center;
+   background-color: rgba(92, 92, 92, 0.607);
+   border: 2px solid rgba(70, 70, 70, 0.338);
+   border-radius: 15px;
+   position: relative;
+   margin:2rem;
+   width: 60rem;
+   top: 5rem;
+   }
+   .products-preview-m .preview-m.active{
+   display: inline-block;
+   }
+
+   .products-preview-m .preview-m img{
+   margin-top: -25%;
+   max-height: 10rem;
+   max-width: 10rem;
+   border-radius: 15px;
+   border: 2px solid rgba(68, 68, 68, 0.748);
+   animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+   box-shadow: rgba(0, 0, 0, 0.476) 5px 5px 10px;
+   }
+
+   .products-preview-m .preview-m .fa-times{
+    position: absolute;
+   top:.5rem; right: 1rem;
+   cursor: pointer;
+   color:#c72323;
+   font-size: 2rem;
+   transition: .3s;
+   }
+   .products-preview-m .preview-m .fa-times:hover{
+   color: orange;
+   transition: .3s;
+   transform: scale(0.8);
+   }
+   .products-preview-m .preview-m h3{
+   padding: .2rem 0;
+   color: orange;
+   font-size: 2.5rem;
+   letter-spacing: 3px;
+   text-shadow: rgba(255, 166, 0, 0.498) 0 5px 10px;
+   cursor: pointer;
+   }
+   .products-preview-m .preview-m h1{
+    margin: -2rem;
+    color:#27ae60;
+   font-size: 1.5rem;
+   letter-spacing: 3px;
+   text-shadow: green 5px 5px 10px;
+   cursor: pointer;
+   }
+   .products-preview-m .preview-m p{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: orange;
+    text-shadow: rgba(255, 166, 0, 0.683) 5px 5px 10px;
+    cursor: pointer;
+   }
+
+   .products-preview-m .preview-m span{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color:#27ae60;
+    text-shadow: green 5px 5px 10px;
+    }
+}
+
+@media screen and (min-width: 2440px) {
+
+    .products-preview-m{
+   position: relative;
+   top: -15rem; 
+   margin-left: 10rem;
+   min-height: 100vh;
+   min-width: 50vh;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   }
+
+   .products-preview-m .preview-m{
+   display: none;
+   padding:2rem;
+   text-align: center;
+   background-color: rgba(92, 92, 92, 0.607);
+   border: 2px solid rgba(70, 70, 70, 0.338);
+   border-radius: 15px;
+   position: relative;
+   margin:2rem;
+   width: 100rem;
+   top: 5rem;
+   }
+   .products-preview-m .preview-m.active{
+   display: inline-block;
+   }
+
+   .products-preview-m .preview-m img{
+   margin-top: -25%;
+   max-height: 10rem;
+   max-width: 10rem;
+   border-radius: 15px;
+   border: 2px solid rgba(68, 68, 68, 0.748);
+   animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+   box-shadow: rgba(0, 0, 0, 0.476) 5px 5px 10px;
+   }
+
+   .products-preview-m .preview-m .fa-times{
+    position: absolute;
+   top:.5rem; right: 1rem;
+   cursor: pointer;
+   color:#c72323;
+   font-size: 2rem;
+   transition: .3s;
+   }
+   .products-preview-m .preview-m .fa-times:hover{
+   color: orange;
+   transition: .3s;
+   transform: scale(0.8);
+   }
+   .products-preview-m .preview-m h3{
+   padding: .2rem 0;
+   color: orange;
+   font-size: 2.5rem;
+   letter-spacing: 3px;
+   text-shadow: rgba(255, 166, 0, 0.498) 0 5px 10px;
+   cursor: pointer;
+   }
+   .products-preview-m .preview-m h1{
+    margin: -2rem;
+    color:#27ae60;
+   font-size: 1.5rem;
+   letter-spacing: 3px;
+   text-shadow: green 5px 5px 10px;
+   cursor: pointer;
+   }
+   .products-preview-m .preview-m p{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: orange;
+    text-shadow: rgba(255, 166, 0, 0.683) 5px 5px 10px;
+    cursor: pointer;
+   }
+
+   .products-preview-m .preview-m span{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color:#27ae60;
+    text-shadow: green 5px 5px 10px;
+    }
+
+    .products-preview-tv{
+   position: relative;
+   top: -80rem; 
+   left: 85rem;
+   min-height: 200vh;
+   width: 500%;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   }
+
+   .products-preview-tv .preview-tv{
+   display: none;
+   padding:2rem;
+   text-align: center;
+   background-color: rgba(92, 92, 92, 0.607);
+   border: 2px solid rgba(160, 160, 160, 0.338);
+   border-radius: 5px;
+   position: relative;
+   margin: 2rem;
+   min-width: 170%;
+   transform: translateY(50px);
+   filter: blur(20px);
+   opacity: 0;
+   animation: showContent .2s .2s linear 1 forwards;
+   }
+   .products-preview-tv .preview-tv.active{
+   display: inline-block;
+   }
+
+   .products-preview-tv .preview-tv img{
+   margin-top: -25%;
+   max-height: 55rem;
+   max-width: 55rem;
+   border: 2px solid rgba(68, 68, 68, 0.748);
+   animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+   box-shadow: rgba(0, 0, 0, 0.476) 5px 5px 10px;
+   }
+
+   .products-preview-tv .preview-tv .fa-times{
+   position: absolute;
+   top:.5rem; right: 1rem;
+   cursor: pointer;
+   color:#c72323;
+   font-size: 2rem;
+   transition: .3s;
+   }
+   .products-preview-tv .preview-tv .fa-times:hover{
+   color: orange;
+   transition: .3s;
+   }
+
+    .products-preview{
+   position: relative;
+   top: -25rem; 
+   left: 25rem;
+   min-height: 100vh;
+   width: 500%;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   }
+
+   .products-preview .preview{
+   display: none;
+   padding:2rem;
+   text-align: center;
+   background-color: rgba(92, 92, 92, 0.607);
+   border: 2px solid rgba(160, 160, 160, 0.338);
+   border-radius: 15px;
+   position: relative;
+   margin:2rem;
+   width: 100rem;
+   transform: translateY(50px);
+   filter: blur(20px);
+   opacity: 0;
+   animation: showContent .2s .2s linear 1 forwards;
+   }
+   .products-preview .preview.active{
+   display: inline-block;
+   }
+
+   .products-preview .preview img{
+   margin-top: -25%;
+   max-height: 20rem;
+   max-width: 20rem;
+   border-radius: 15px;
+   border: 2px solid rgba(68, 68, 68, 0.748);
+   animation: float-up-down 3s linear infinite both;
+   animation-delay: .5s!important;
+   box-shadow: rgba(0, 0, 0, 0.476) 5px 5px 10px;
+   }
+
+   .products-preview .preview .fa-times{
+   position: absolute;
+   top:.5rem; right: 1rem;
+   cursor: pointer;
+   color:#444;
+   font-size: 2rem;
+   transition: .3s;
+   }
+   .products-preview .preview .fa-times:hover{
+   color: orange;
+   transition: .3s;
+   }
+   .products-preview .preview h3{
+   padding: .2rem 0;
+   color: orange;
+   font-size: 2.5rem;
+   letter-spacing: 3px;
+   text-shadow: rgba(255, 166, 0, 0.498) 0 5px 10px;
+   cursor: pointer;
+   }
+
+   .products-preview .preview p{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: orange;
+    text-shadow: rgba(255, 166, 0, 0.683) 5px 5px 10px;
+    cursor: pointer;
+   }
+
+   .products-preview .preview .price{
+   margin-left: 25%;
+   width: 13rem;
+   text-align: center;
+   align-items: center;
+   font-size: 2.5rem;
+   padding: .5rem;
+   color:#27ae60;
+   text-shadow: green 5px 5px 10px;
+   background-color: rgba(68, 68, 68, 0.748);
+   border: 2px solid rgba(160, 160, 160, 0.338);
+   border-radius: 20px;
+   cursor: pointer;
+   transition: .2s;
+   }
+   .products-preview .preview span{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color:#27ae60;
+    text-shadow: green 5px 5px 10px;
+   }
+   
+    .carousel .list .item .undertitle{
+    position: absolute;
+    margin-left: -15rem;
+    margin-top: -6rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: orange;
+    text-shadow: #000000d6 5px 0 10px;
+    }   
+    .container{
+        position: absolute;
+        right: 25rem;
+        top: -7rem;
+    }
+    .carousel .list .item .desev{
+        position: relative;
+        margin-top: 50rem;
+    }
+    .contact-container{
+    position: absolute;
+    top: 40rem;
+    margin-left: 35rem;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+    .containerp{
+        position: absolute;
+        right: 25rem;
+        top: 2rem;
+    }
+    .contact-containerp{
+    position: absolute;
+    top: 40rem;
+    margin-left: 35rem;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+    .carousel .list .item .desang{
+     color: orange;
+     font-size: 15px;
+     font-weight: bold;
+     width: 30rem;
+     text-shadow: #000 2px 0 5px;
+     padding: 15px;
+     border-radius: 15px;
+    }
+    header img{
+          position: relative;
+          margin-top: 95%;
+          width: 95px;
+          height: 75px;
+          left: -500%;
+    }
+    header h2{
+        margin-top: 128rem;
+        width: 50%;
+    }
+    .arrows{
+          position: absolute;
+          top: 93%;
+          right: 3.35%;
+          z-index: 100;
+          width: 300px;
+          max-width: 30%;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+    }
+
+    @keyframes outFrame{
+          to{
+              width: 150px;
+              height: 220px;
+              bottom: 50px;
+              left: 70%;
+              border-radius: 20px;
+          }
+    }
+    .carousel .list .item .des{
+          width: 550%;
+          font-size: 1.2rem;
+          color: rgb(221, 155, 31);
+          font-weight: bold;
+          text-shadow: #000 5px 0 10px;
+          background-color: rgba(128, 128, 128, 0.371);
+          padding: 15px;
+          border-radius: 15px;
+          border: 2px solid rgba(160, 160, 160, 0.338);
+    }
+    .carousel .list .item .desev{
+          margin-top: -50%;
+          margin-left: 70rem;
+          color: orange;
+          font-size: 2rem;
+          font-weight: bold;
+          width: 300%;
+          text-shadow: #000 5px 0 10px;
+          border: 2px solid rgba(160, 160, 160, 0.338);
+          padding: 15px;
+          border-radius: 15px;
+          background-color: rgba(128, 128, 128, 0.371);
+    }
+    .carousel .list .item .videoab{
+    width: 600%;
+    height: 150%;
+    margin-top: -10%;
+    margin-left: -250%;
+    filter: blur(10px) grayscale(75%);
+    }
+    .container{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-top: 1rem;
+    margin-left: -25rem;
+    animation: float-up-down 2s ease-in-out infinite both;
+    -webkit-animation: float-up-down 4s linear forwards;
+    }
+    .containerp{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-top: 1rem;
+    margin-left: -25rem;
+    animation: float-up-down 2s ease-in-out infinite both;
+    -webkit-animation: float-up-down 4s linear forwards;
+    }
+    .thumbnail{
+          position: absolute;
+          bottom: 7.5%;
+          left: 87%;
+          width: max-content;
+          z-index: 100;
+          display: flex;
+          gap: 20px;
+      }
+      .thumbnail .item{
+          width: 130px;
+          height: 200px;
+          flex-shrink: 0;
+          position: relative;
+      }
+      .thumbnail .item img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+      }
+}
+
+@keyframes titleAnimation-555a5b98 {
+     to {
+         transform: translateY(0)
+     }
+}
+
+.container{
+position: relative;
+display: flex;
+width: 1500px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+padding: 15px;
+margin-top: 2%;
+margin-left: -70%;
+}
+.container .card{
+width: 208px;
+position: relative;
+height: 200px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+margin: 20px 10px;
+padding: 15px 15px;
+display:flex;
+flex-direction: column;
+transition:0.3s ease-in-out;
+margin-top: 5%;
+animation: float-up-down 2.5s linear infinite both;
+animation-delay: 2s!important;
+border-radius: 15px;
+cursor: pointer;
+}
+.container .card h2{
+color: orange;
+width: 70%;
+font-weight: 650;
+text-shadow: #000 5px 0 10px;
+margin-left: 5%;
+font-size: 15px;
+text-transform: uppercase;
+}
+.container .card p{
+width: 30%;
+color: orange;
+font-weight: 550;
+padding: 3px;
+text-align: center;
+text-shadow: #000 5px 0 10px;
+margin-left: 5%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 15px;
+}
+.container .card .info{
+width: 30%;
+color: orange;
+font-weight: 550;
+padding: 4px;
+text-align: center;
+text-shadow: #000 5px 0 10px;
+margin-left: 45%;
+margin-top: -18.7%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+transition: .3s;
+}
+.container .card .info:hover{
+    background-color: rgba(60, 60, 60, 0.371);
+    transition: .3s;
+}
+.container .card .imgBx{
+position: relative;
+width: 260px;
+height: 150px;
+top: -60px;
+animation: float-up-down 2.5s linear infinite both;
+animation-delay: 2s!important;
+}
+.container .card .imgBx img{
+border: 2px solid rgba(160, 160, 160, 0.338);
+max-width: 80%;
+border-radius: 10px;
+cursor: pointer;
+transform-style: preserve-3d;
+transition: all .5s;
+}
+.container .card .det{
+width: 30%;
+color: orange;
+font-weight: 550;
+padding: 4px;
+text-align: center;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+margin-left: .5rem;
+margin-top: 0%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+transition: .3s;
+}
+.container .card .det:hover{
+    background-color: rgba(60, 60, 60, 0.371);
+    transition: .3s;
+}
+.container .card .det:active{
+    transform: scale(0.8);
+}
+@keyframes float-up-down {
+    0% {
+        -webkit-transform:translateY(0)
+    }
+
+    50% {
+        -webkit-transform: translateY(-10%);
+        transform:translateY(-5%)
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform:translateY(0)
+    }
+}
+.contact-container{
+    position: absolute;
+    margin-top: -50%;
+    margin-left: 35rem;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-left{
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    height: auto;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgba(92, 92, 92, 0.27);
+    border-radius: 15px;
+}
+
+.contact-left-title h2{
+    font-weight: bold;
+    color: orange;
+    font-size: 40px;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+    text-shadow: rgba(255, 166, 0, 0.683) 5px 5px 10px;
+}
+.contact-left-title h1{
+    font-weight: 550;
+    color: orange;
+    font-size: 11px;
+    margin: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: rgba(255, 166, 0, 0.749) 5px 5px 10px;
+    width: 700px;
+}
+.contact-left-title hr{
+    border: none;
+    margin-left: 0%;
+    width: 350px;
+    height: 5px;
+    background-color: orange;
+    border-radius: 10px;
+}
+.contact-left-title p{
+    font-weight: bold;
+    text-shadow: #000000d6 5px 0 15px;
+    letter-spacing: 2px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #ff944f;
+    border-radius: 5px;
+    background-color: rgba(92, 92, 92, 0.607);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    cursor: text;
+}
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 5px;
+}
+.contact-inputs:focus{
+    border: 2px solid #ff994f;
+    transition: .3s;
+}
+.contact-inputs::placeholder{
+    color: #ff944f;
+}
+.contact-inputsnr{
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #ff944f;
+    border-radius: 5px;
+    background-color: rgba(92, 92, 92, 0.607);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    cursor: text;
+}
+.contact-inputsnr:focus{
+    border: 2px solid #ff994f;
+    transition: .3s;
+}
+.contact-inputsnr::placeholder{
+    color: #ff944f;
+}
+.time-picker {
+    color: #ff944f;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    background-color: rgba(92, 92, 92, 0.607);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    appearance: none;
+}
+.time-picker::-webkit-calendar-picker-indicator {
+    margin-right: 3%;
+    opacity: 1;
+    background-color: rgba(156, 156, 156, 0.675);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .3s;
+}
+.time-picker::-webkit-calendar-picker-indicator:hover{
+    background-color: #ff944f;
+    transition: .3s;
+}
+.time-picker:focus{
+    border-color:#ff994f;
+}
+.time-picker:focus + ::after {
+    color: #ff944f;
+}
+.contact-left button{
+    display: flex;
+    width: 85px;
+    height: 30px;
+    margin-left: 48%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffffa3;
+    text-shadow: #000000d6 5px 0 10px;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(92, 92, 92, 0.607);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    cursor: pointer;
+    transition: .3s;
+}
+.contact-left button:hover{
+    background-color: rgb(255, 140, 0);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    color: rgba(255, 255, 255, 0.854);
+    opacity: .9;
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1.055);
+}
+.containerv .cardv .infovan{
+position: absolute;
+height: 20rem;
+width: 20rem;
+margin-top: 6rem;
+left: 11rem;
+color: red;
+font-weight: 700;
+font-size: 50px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+opacity: 0;
+}
+
+.containerp{
+position: relative;
+width: 1500px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+padding: 30px;
+margin-top: 20%;
+margin-left: -70%;
+}
+.containerp .cardp{
+width: 208px;
+position: relative;
+height: 200px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+margin: 20px 10px;
+padding: 20px 15px;
+display:flex;
+flex-direction: column;
+transition:0.3s ease-in-out;
+margin-top: 5%;
+animation: float-up-down 2.5s linear infinite both;
+animation-delay: 2s!important;
+border-radius: 15px;
+}
+.containerp .cardp h2{
+color: orange;
+width: 70%;
+font-weight: 650;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+margin-left: 5%;
+cursor: pointer;
+}
+.containerp .cardp p{
+width: 30%;
+color: rgb(8, 92, 8);
+font-weight: 550;
+padding: 3px;
+text-align: center;
+text-shadow: green 5px 0 10px;
+margin-left: 5%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(8, 123, 8, 0.59);
+border-radius: 15px;
+cursor: pointer;
+}
+.containerp .cardp .info{
+width: 30%;
+color: orange;
+font-weight: 550;
+padding: 4px;
+text-align: center;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+margin-left: 45%;
+margin-top: -18.7%;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+transition: .3s;
+}
+.containerp .cardp .info:hover{
+    background-color: rgba(60, 60, 60, 0.371);
+    transition: .3s;
+}
+.containerp .cardp .info:active{
+    transform: scale(0.8);
+}
+.containerp .cardp .infoex{
+margin-left: 5%;
+width: 30%;
+color: orange;
+font-weight: 550;
+padding: 4px;
+text-align: center;
+text-shadow: rgba(255, 166, 0, 0.722) 5px 0 10px;
+font-size: 15px;
+background-color: rgba(128, 128, 128, 0.371);
+border: 2px solid rgba(160, 160, 160, 0.338);
+border-radius: 20px;
+cursor: pointer;
+transition: .3s;
+}
+.containerp .cardp .infoex:hover{
+    background-color: rgba(60, 60, 60, 0.371);
+    transition: .3s;
+}
+.containerp .cardp .infoex:active{
+    transform: scale(0.8);
+}
+.containerp .cardp .imgBx{
+position: relative;
+width: 260px;
+height: 150px;
+top: -60px;
+animation: float-up-down 2.5s linear infinite both;
+animation-delay: 2s!important;
+}
+.containerp .cardp .imgBx img{
+border: 2px solid rgba(160, 160, 160, 0.338);
+max-width: 80%;
+border-radius: 10px;
+}
+.containerp .cardp .imgBx .discount img{
+position: absolute;
+width: 85px;
+height: 50px;
+top: -25px;
+left: -15px;
+border: none;
+opacity: 0;
+}
+#notification {
+    position: absolute;
+    margin-top: 1rem;
+    font-size: .8rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding: 2px;
+    justify-content: center;
+    text-align: center;
+    color: #2a2a2ac6;
+    text-shadow: #000000ac 5px 0 10px;
+    background-color: rgb(255, 140, 0);
+    border: 2px solid rgba(160, 160, 160, 0.338);
+    border-radius: 5px;
+    display: none; 
+    text-transform: uppercase;
+    animation: fadeupnotify .3s linear 1 forwards;
+    cursor: pointer;
+}
+#notification.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+@keyframes fadeupnotify{
+    50% {
+        opacity: .4;
+        filter: blur(10px);
+        margin-top: -5rem;
+    }
+    75% {
+        opacity: .7;
+        filter: blur(2px);
+        margin-top: -3rem;
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        margin-top: 1rem;
+    }
+}
+</style>
+<body>
+    <header>
+    </header>
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <div class="error">
+                    <h1>Foloseste un ecran mai mare <span> [1920px 1080px] </span></h1>
+                </div>
+                <div class="cpright">
+                    <h1><span>© Mayans MC</span> this website is not affiliated with any real-world brands. </h1>
+                </div>
+                <div class="update">
+                    <h1>LAST UPDATE <span>02.07.24</span></h1>
+                </div>
+                <img src="image/imagine.jpg">
+                <div class="observator">
+                    <img src="image/observator.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="author">HOME</div>
+                    <div class="title">MAYANS</div>
+                    <div class="topic">MC</div>
+                    <div class="des">
+                        - Mayans MC este un club de motociclisti provenit din Mexic. Pasiunea acestui club sunt motoarele de tip chopper alaturi de mecanica. Obiceiurile noastre sunt plimbarile nocturne pe motor, admirand peisajul pe care ni-l ofera drumurile nisipoase din Sandy.
+                     <br>
+                     <br>Pe langa pasiunile noastre, suntem o familie foarte unita care pune respectul pe primul loc.
+                     <br>
+                     <br>- Obiectivul nostru este de a dezvolta aceasta pasiune pentru cetatenii acestui oras si dorim sa construim impreuna un service dedicat motoarelor.
+                     <br>
+                     <br>- Service-ul dorim sa il construim in zona Grapeseed din orasul Sandy, fiind un service de ultima generatie si unicat.
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/img2.png">
+                <div class="content">
+                    <div class="author">DESPRE NOI</div>
+                    <div class="title">MAYANS</div>
+                    <div class="topic">MC</div>
+                    <div class="des">
+Despre Mayans
+<br>
+- Mayans este un club de motociclisti care isi are originile in Mexic. Service-ul de motoare din zona Grapeseed este un service de ultima generatie si totodata un service unicat in oras cu produse de cea mai inalta calitate.
+<br>
+<br>
+Cum am infiintat Mayans MC SRL
+<br>
+- Mayans MC SRL a fost fondat in data de 5/5/2024, din placerea si pasiunea pentru motoare cat si pentru mecanica. Cei 5 baieti veniti din Mexic au dorit sa aduca o schimbare radicala asupra orasului Sandy printr-un service modern de motociclete.
+<br>
+<br>
+Ce planuri avem pe viitor 
+<br>
+- Planul nostru pe viitor este de a ne extinde cu alte service-uri si totodata sa dezvoltam pasiunea pentru motoare in tot orasul. Iar prin relatiile din Mexic, dorim sa ne creem propriul nostru brand de motociclete de tip chopper.
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/img4.png">
+                <div class="content">
+                    <div class="author">ANGAJARE</div>
+                    <div class="title">MAYANS</div>
+                    <div class="topic">MC</div>
+                    <div class="desang">
+                        Vrei sa te alaturi clubului nostru de motociclisti ?
+                        <br>Ai nevoie de urmatoarele: <br> <br>
+                         Minim <span>100</span> de luni in oras <br>
+                         Implicare si devotament <br>
+                         Sa detii un motor de tip: Chooper <br>
+                         Sa purtati si sa oferiti respect <br>
+                         Numar contact: <span>0713131716</span>
+                   </div>
+                   <div class="ls">
+                    <img src="./image/LOCATIESV.png" alt="">
+                   </div>
+                    <div class="contact-container">
+                        <form id="form" class="contact-left">
+                            <div class="contact-left-title">
+                                <div id="notification" class="hidden">Cv-ul dumneavoastra a fost inregistrat !</div>
+                                <h2>ANGAJARE</h2>
+                                    <p>Completeaza formularul de mai jos pentru a-ti depune CV-ul.</p>
+                                    <hr>
+                                    <input type="hidden" name="access_key" value="YOUR ACCESS KEY">
+                                       <h1>Nume</h1>
+                                    <input type="text" id="field1" name="nume:" placeholder="Numele tau.." class="contact-inputs" maxlength="15" required>
+                                    <h1>Prenume</h1>
+                                    <input type="text" id="field2" name="prenume:" placeholder="Prenumele tau.." class="contact-inputs" maxlength="15" required>
+                                       <h1>Email</h1>
+                                    <input type="text" id="field3" name="email:" placeholder="Email-ul tau.." class="contact-inputs" maxlength="40" required>
+                                       <h1>Numar de telefon + Alege ora interviului</h1>
+                                    <input type="number" id="field4" name="numar de telefon:" placeholder="EX: 0712345678.." class="contact-inputsnr" onkeypress="return isNumberKey(event)" required>
+                                    <input type="time" class="time-picker" name="Ora interviu:" value="18:00">
+                                       <h1>De ce doresti sa te alaturi acestui service ?</h1>
+                                    <textarea name="mesaj:" id="field5" placeholder="De ce doresti sa ni te alaturi?" class="contact-inputs" maxlength="150" required></textarea>
+                                <button id="notifyButton">TRIMITE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/img3.png">
+                <div class="content">
+                    <div class="authorev">EVENIMENTE</div>
+                    <div class="title">MAYANS MC</div>
+                    <div class="topic">EVENIMENTE</div>
+                    <div class="desev">
+                         12 EVENIMENTE <br> +3.800.000 RON <br> +410 Participanti
+                    </div>
+                    <div class="undertitle">Ultimele 10 evenimente...</div>
+                            <!-- container -->
+        <div class="container">
+			
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/pmuo.png">
+					</a>
+					<h2>Match Your Outfit With Your Bike</h2>
+				</div>
+			</div>
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/pt2.png">
+					</a>
+					<h2>Tombola</h2>	
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/pmm.png">
+					</a>
+					<h2>Motoarele Muzicale</h2>
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/pdb.png">
+					</a>
+					<h2>Deschidere Club Bahamas Mamas</h2>
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/ptb.png">
+					</a>
+					<h2>Tombola Bahamas Mamas</h2>
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/pdsg.png">
+					</a>
+					<h2>Deschidere Service Grapeseed</h2>
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/pbtc.png">
+					</a>
+					<h2>Brake The Code</h2>
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/phh.png">
+					</a>
+					<h2>HAPPY HOUR</h2>
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/evhdr.png">
+					</a>
+					<h2>Harley Davidson Race</h2>
+				</div>	
+			</div>	
+
+            <div class="card">
+				<div class="imgBx">
+					<a href="#">
+					<img src="./image/evtuys.png">
+					</a>
+					<h2>Tell us your story</h2>
+				</div>	
+			</div>	
+		</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img class="imgpack" src="image/dch.png">
+                <div class="content">
+                    <div class="authorp">PACHETE SERVICE</div>
+                    <div class="title">MAYANS</div>
+                    <div class="topic">MC</div>
+
+                    <div class="products-preview">
+                        <div class="preview" data-target="p-1">
+                           <i class="fas fa-times"></i>
+                           <img src="./image/pst.png" alt="">
+                           <h3>PACHET STANDARD</h3>
+                           <p>Reparatie <br> Spalare</p>
+                           <div class="price">$5.000</div>
+                        </div>
+
+                        <div class="preview" data-target="p-2">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/pn.png" alt="">
+                            <h3>PACHET NORMAL</h3>
+                            <p>Reparatie <br> Spalare <br> Ceara</p>
+                            <div class="price">$8.000</div>
+                         </div>
+
+                         <div class="preview" data-target="p-3">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/pp.png" alt="">
+                            <h3>PACHET PREMIUM</h3>
+                            <p>Reparatie <br> Spalare <br> Vopsire <br> Ceara <br> Jante Stock <br> Geamuri</p>
+                            <div class="price">$25.000</div>
+                         </div>
+
+                         <div class="preview" data-target="p-4">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/pv.png" alt="">
+                            <h3>PACHET VIP</h3>
+                            <p>Reparatie <br> Spalare <br> Ceara <br> Full Mecanic <br> Modificare Placuta</p>
+                            <div class="price">$75.000</div>
+                         </div>
+
+                         <div class="preview" data-target="p-5">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/pl.png" alt="">
+                            <h3>PACHET LUXURY</h3>
+                            <p>Reparatie <br> Spalare <br> Ceara <br> Full Mecanic <br> Geamuri <br> Neoane <br> Speedometer <br> Jante Stock <br> Modificare Placuta</p>
+                            <div class="price">$100.000</div>
+                         </div>
+
+                         <div class="preview" data-target="p-6">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/ptt.png" alt="">
+                            <h3>TRACTARI</h3>
+                            <p> <span>10.000$</span>Reparatie 50% pe loc <br>
+                                <span>7.500$</span>Reparatie 100% la Service <br>
+                                <span>5.000$</span>Depanare <br>
+                                <span>5.000$</span>Canistra <br>
+                                <span>15.000$</span>Reparatie + trusa de reparatie extra <br>
+                            </p>
+                         </div>
+
+                         <div class="preview" data-target="p-7">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/pe.png" alt="">
+                            <h3>EXTRA</h3>
+                            <p> <span>1.500$</span>Spalare <br>
+                                <span>2.500$</span>Spalare Full <br>
+                                <span>5.000$</span>Reparatie <br>
+                                <span>15.000$</span>Jante Stock <br>
+                                <span>5.000$</span>Geamuri Frumurii<br>
+                                <span>3.000$</span>Vopsire Principala<br>
+                                <span>3.000$</span>Vopsire Secundara<br>
+                                <span>5.000$</span>Vopsire Speciala<br>
+                                <span>3.000$</span>Vopsire Jante<br>
+                                <span>5.000$</span>Culoare Lumini<br>
+                                <span>3.000$</span>Neoane <br>
+                                <span>5.000$</span>Colant <br>
+                                <span>5.000$</span>Culoare Fum<br>
+                                <span>7.500$</span>Bara fata<br>
+                                <span>7.500$</span>Bara spate<br>
+                                <span>4.000$</span>Speedometer <br>
+                                <span>5.000$</span>Modificare Placuta <br>
+                            </p>
+                         </div>
+
+                         <div class="preview" data-target="p-8">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/exv2.png" alt="">
+                            <h3>EXTRA V2</h3>
+                            <p> 
+                                <span>5.000$</span>Evacuare <br>
+                                <span>4.000$</span>Grila <br>
+                                <span>5.000$</span>Capota <br>
+                                <span>7.500$</span>Rollcage <br>
+                                <span>3.500$</span>Acoperis <br>
+                                <span>4.500$</span>Praguri <br>
+                                <span>5.000$</span>Spoiler <br>
+                                <span>75.000$</span>Full Mecanic <br>
+                                <span>20.500$</span>Motor Custom <br>
+                                <span>5.500$</span>Sistem Franare <br>
+                                <span>15.500$</span>Transmisie <br>
+                                <span>8.000$</span>Suspensie <br>
+                                <span>15.500$</span>Armura <br>
+                                <span>15.500$</span>Turbo <br>
+                                <span>2.500$</span>Constatare <br>
+                                <span>5.000$</span>Trusa de reparate <br>
+                            </p>
+                         </div>
+
+                         <div class="preview" data-target="p-9">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/fex.png" alt="">
+                            <h3>Full Exterior</h3>
+                            <p> 
+                                <span>5.000$</span>Evacuare <br>
+                                <span>4.000$</span>Grila <br>
+                                <span>5.000$</span>Capota <br>
+                                <span>7.500$</span>Rollcage <br>
+                                <span>3.500$</span>Acoperis <br>
+                                <span>4.500$</span>Praguri <br>
+                                <span>5.000$</span>Spoiler <br>
+                                <span>5.000$</span>Modificare Placuta <br>
+                                <span>15.000$</span>Jante Stock <br>
+                                <span>5.000$</span>Geamuri Frumurii<br>
+                                <span>3.000$</span>Vopsire Principala<br>
+                                <span>3.000$</span>Vopsire Secundara<br>
+                                <span>5.000$</span>Vopsire Speciala<br>
+                                <span>3.000$</span>Vopsire Jante<br>
+                                <span>5.000$</span>Culoare Lumini<br>
+                                <span>3.000$</span>Neoane <br>
+                                <span>5.000$</span>Colant <br>
+                            </p>
+                         </div>
+
+                         <div class="preview" data-target="p-10">
+                            <i class="fas fa-times"></i>
+                            <img src="./image/fm.png" alt="">
+                            <h3>Full Mecanic</h3>
+                            <p> 
+                                <span>20.000$</span>Motor Custom <br>
+                                <span>5.000$</span>Sistem Franare <br>
+                                <span>15.000$</span>Transmisie <br>
+                                <span>7.500$</span>Suspensie <br>
+                                <span>15.000$</span>Armura <br>
+                                <span>15.000$</span>Turbo <br>
+                            </p>
+                         </div>
+                    </div>
+
+                    <div class="containerp">
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/pst.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Standard</h2>
+                                <p>5.000$</p>
+                                <div class="info" data-name="p-1">
+                                    Informatii
+                                </div>
+                            </div>	
+                        </div>
+            
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/pn.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Normal</h2>
+                                <p>8.000$</p>
+                                <div class="info" data-name="p-2">
+                                    Informatii
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/pp.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Premium</h2>
+                                <p>25.000$</p>
+                                <div class="info" data-name="p-3">
+                                    Informatii
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/pv.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>VIP</h2>
+                                <p>75.000$</p>	
+                                <div class="info" data-name="p-4">
+                                    Informatii
+                                </div>			
+                            </div>	
+                        </div>	
+            
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/pl.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Luxury</h2>
+                                <p>100.000$</p>
+                                <div class="info" data-name="p-5">
+                                    Informatii
+                                </div>
+                            </div>	
+                        </div>
+
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/fex.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Full Exterior</h2>
+                                <p>95.000$</p>
+                                <div class="info" data-name="p-9">
+                                    Informatii
+                                </div>
+                            </div>	
+                        </div>	
+
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/fm.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Full Mecanic</h2>
+                                <p>70.000$</p>
+                                <div class="info" data-name="p-10">
+                                    Informatii
+                                </div>
+                            </div>	
+                        </div>	
+
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/pe.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Extra</h2>
+                                <div class="infoex" data-name="p-7">
+                                    Informatii
+                                </div>
+                            </div>	
+                        </div>	
+
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/exv2.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Extra V2</h2>
+                                <div class="infoex" data-name="p-8">
+                                    Informatii
+                                </div>
+                            </div>	
+                        </div>	
+
+                        <div class="cardp">
+                            <div class="imgBx">
+                                <a href="#">
+                                <img src="./image/ptt.png">
+                                </a>
+                                <div class="discount">
+                                    <img src="./image/dsc.png" alt="">
+                                </div>
+                                <h2>Tractari</h2>
+                                <div class="infoex" data-name="p-6">
+                                    Informatii
+                                </div>
+                            </div>	
+                        </div>	
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/bgtaco.png">
+                <div class="content">
+                    <div class="authorev">FOOD TRUCK</div>
+                    <div class="title">MAYANS MC</div>
+                    <div class="topic">TACO VAN</div>
+                    <div class="tvan">
+                        <img src="./image/tacovandc.png" alt="">
+                    </div>
+                    <div class="products-preview-tv">
+                        <div class="preview-tv" data-target="v-1">
+                           <i class="fas fa-times"></i>
+                           <img src="./image/meniuvan.png" alt="">
+                        </div> 
+                    </div>
+                    <div class="containerv">
+                        <div class="cardv">
+                            <div class="infovan" data-name="v-1">
+                                Informatii
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="image/service.png">
+                <div class="content">
+                    <div class="authorev">ANGAJATI</div>
+                    <div class="title">MAYANS MC</div>
+                    <div class="topic">ANGAJATI</div>
+
+                    <div class="products-preview-m">
+
+                        <div class="preview-m" data-target="m-1">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Mine Cristi.png" alt="">
+                           <h3>Mine Cristi</h3>
+                           <h1>Sef Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 19.06.2024<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0741885015<br>
+                                            <span>Luni in oras:</span> 50<br> 
+                                            <span>CNP:</span> 18615<br> <br>
+                                            <span>Atestat Transport</span> DA<br>
+                                            <span>Atestat Transport agabaritic</span> DA<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-3">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Ionut Andrei.png" alt="">
+                           <h3>Ionut Andrei</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 16.06.2024<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0714508728<br>
+                                            <span>Luni in oras:</span> 100 <br>
+                                            <span>CNP:</span> 34796<br> <br>
+                                            <span>Atestat Transport</span> - <br>
+                                            <span>Atestat Transport agabaritic</span> - <br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-4">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Vincenzo Kevin.png" alt="">
+                           <h3>Vincenzo Kevin</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 7.06.2024<br>  
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0713304959<br>
+                                            <span>Luni in oras:</span> 137 <br>
+                                            <span>CNP:</span> 36238<br> <br>
+                                            <span>Atestat Transport</span> - <br>
+                                            <span>Atestat Transport agabaritic</span> - <br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-8">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Butelie George.png" alt="">
+                           <h3>Butelie George</h3>
+                           <h1>Sef Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 21.06.2024<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0717558567<br>
+                                            <span>Luni in oras:</span> 1030<br>
+                                            <span>CNP:</span> 1685<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-9">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Paganel Robert.png" alt="">
+                           <h3>Paganel Robert</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 16.06.2024<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0713856679<br>
+                                            <span>Luni in oras:</span> 60<br>
+                                            <span>CNP:</span> 34793<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-13">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/MykeOx Pisti.png" alt="">
+                           <h3>MykeOx Pisti</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 19.06.2024<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0710069125<br>
+                                            <span>Luni in oras:</span> 210<br>
+                                            <span>CNP:</span> 35459<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-15">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Cassius Shakur.png" alt="">
+                           <h3>Cassius Shakur</h3>
+                           <h1>Sef Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 19.06.2024<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                        <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0711336935<br>
+                                            <span>Luni in oras:</span> 150<br>
+                                            <span>CNP:</span> 37556<br> <br>
+                                            <span>Atestat Transport</span> DA<br>
+                                            <span>Atestat Transport agabaritic</span> DA<br>
+                                            <span>Certificat Tableta</span> DA <br>
+                                            <span>Tester Atestate</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-16">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Spider Matei.png" alt="">
+                           <h3>Spider Matei</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 30.06.24<br> 
+                                <span>Ultima avansare:</span> -<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0710832763<br>
+                                            <span>Luni in oras:</span> 586<br>
+                                            <span>CNP:</span> 18193<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-18">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Sabie Mihai.png" alt="">
+                           <h3>Sabie Mihai</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 24.06.24<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0718237713<br>
+                                            <span>Luni in oras:</span> 100<br>
+                                            <span>CNP:</span> 36105<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+                         
+                         <div class="preview-m" data-target="m-20">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Popa Ciprian.png" alt="">
+                           <h3>Pistol Nelu</h3>
+                           <h1>Ucenic Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 24.06.24<br> 
+                                <span>Ultima avansare:</span> -<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0718381750<br>
+                                            <span>Luni in oras:</span> 300<br>
+                                            <span>CNP:</span> 34974<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-21">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Xulescu Emi.png" alt="">
+                           <h3>Xulescu Emi</h3>
+                           <h1>Ucenic Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 27.06.24<br> 
+                                <span>Ultima avansare:</span> -<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0712605042<br>
+                                            <span>Luni in oras:</span> 1251<br>
+                                            <span>CNP:</span> 844<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-22">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Bobos Gabarete.png" alt="">
+                           <h3>Bobos Gabarate</h3>
+                           <h1>Ucenic Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 26.06.24<br> 
+                                <span>Ultima avansare:</span> -<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0717410582<br>
+                                            <span>Luni in oras:</span> 228<br>
+                                            <span>CNP:</span> 30440<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-23">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Ivan Sebastian.png" alt="">
+                           <h3>Ivan Sebastian</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 26.06.24<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0714470302<br>
+                                            <span>Luni in oras:</span> 337<br>
+                                            <span>CNP:</span> 26749<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-24">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Open Popescu.png" alt="">
+                           <h3>Open Popescu</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 27.06.24<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0714813705<br>
+                                            <span>Luni in oras:</span> 100<br>
+                                            <span>CNP:</span> 37678<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+
+                         <div class="preview-m" data-target="m-25">
+                            <i class="fas fa-times"></i>
+                           <img src="./image/pb/Pardillan Francezu.png" alt="">
+                           <h3>Pardillan Francezu</h3>
+                           <h1>Mecanic</h1>
+                           <p><br>
+                            <span>Data intrare:</span> 27.06.24<br> 
+                                <span>Ultima avansare:</span> 30.06.24<br> <br>
+                                    <span>Ore Pontaj:</span> 0<br>
+                                        <span>Numar de telefon:</span> 0718772501<br>
+                                            <span>Luni in oras:</span> 120<br>
+                                            <span>CNP:</span> 37773<br> <br>
+                                            <span>Atestat Transport</span> -<br>
+                                            <span>Atestat Transport agabaritic</span> -<br>
+                                            <span>Certificat Tableta</span> DA
+                            </p>
+                         </div>
+                    </div>
+
+                    
+                    <div class="box">
+
+                        <div class="itemcardmc">
+                            <img src="./image/pb/Mine Cristi.png" alt="">
+                            <div class="star">
+                                <img src="./image/star.png" alt="">
+                            </div>
+                            <div class="stars">
+                                <img src="./image/stars.png" alt="">
+                            </div>
+                            <h2 >Minne Cristi</h2>
+                            <p>Sef Mecanic</p>
+                            <div class="infom" data-name="m-1">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcardta">
+                            <img src="./image/pb/Cassius Shakur.png" alt="">
+                            <div class="ttw">
+                                <img src="./image/ttw1.png" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="cpb">
+                                <img src="./image/cpb.png" alt="">
+                            </div>
+                            <div class="cpb2">
+                                <img src="./image/cpb.png" alt="">
+                            </div>
+                            <h2 >Cassius Shakur</h2>
+                            <p>Sef Mecanic</p>
+                            <div class="infom" data-name="m-15">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Butelie George.png" alt="">
+                            <h2 >Butelie George</h2>
+                            <p>Sef Mecanic</p>
+                            <div class="infom" data-name="m-8">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Ionut Andrei.png" alt="">
+                            <h2 >Ionut Andrei</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-3">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Vincenzo Kevin.png" alt="">
+                            <h2 >Vincenzo Kevin</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-4">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Paganel Robert.png" alt="">
+                            <h2>Paganel Robert</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-9">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/MykeOx Pisti.png" alt="">
+                            <h2 >MykeOx Pisti</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-13">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Spider Matei.png" alt="">
+                            <h2 >Spider Matei</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-16">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Sabie Mihai.png" alt="">
+                            <h2 >Sabie Mihai</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-18">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Ivan Sebastian.png" alt="">
+                            <h2 >Ivan Sebastian</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-23">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Open Popescu.png" alt="">
+                            <h2 >Open Popescu</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-24">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Pardillan Francezu.png" alt="">
+                            <h2 >Pardillan Francezu</h2>
+                            <p>Mecanic</p>
+                            <div class="infom" data-name="m-25">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Pistol Nelu.png" alt="">
+                            <h2 >Pistol Nelu</h2>
+                            <h1>Ucenic Mecanic</h1>
+                            <div class="infom" data-name="m-20">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Xulescu Emi.png" alt="">
+                            <h2 >Xulescu Emi</h2>
+                            <h1>Ucenic Mecanic</h1>
+                            <div class="infom" data-name="m-21">
+                                Informatii
+                            </div>
+                        </div>
+
+                        <div class="itemcard">
+                            <img src="./image/pb/Bobos Gabarete.png" alt="">
+                            <h2 >Bobos Gabarate</h2>
+                            <h1>Ucenic Mecanic</h1>
+                            <div class="infom" data-name="m-22">
+                                Informatii
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <h1>Urmatoarea pagina</h1>
+                <p>Acasa</p>
+                <img src="image/tb1.png">
+            </div>
+            <div class="item">
+                <h1>Urmatoarea pagina</h1>
+                <p>Despre noi</p>
+                <img src="image/tb2.png">
+            </div>
+            <div class="item">
+                <h1>Urmatoarea pagina</h1>
+                <p>Angajare</p>
+                <img src="image/tb4.png">
+            </div>
+            <div class="item">
+                <h1>Urmatoarea pagina</h1>
+                <p>Evenimente</p>
+                <img src="image/tb3.png">
+            </div>
+            <div class="item">
+                <h1>Urmatoarea pagina</h1>
+                <p>Pachete</p>
+                <img src="image/tb5.png">
+            </div>
+            <div class="item">
+                <h1>Urmatoarea pagina</h1>
+                <p>Taco Van</p>
+                <img src="image/tb6.png">
+            </div>
+            <div class="item">
+                <h1>Urmatoarea pagina</h1>
+                <p>Angajati</p>
+                <img src="image/tb7.png">
+            </div>
+        </div>
+        <!-- next prev -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+    <script type="text/javascript" src="glowcard.js"></script>
+    <script type="text/javascript" src="server.js"></script>
+    <script>
+        //step 1: get DOM
+let nextDom = document.getElementById('next');
+let prevDom = document.getElementById('prev');
+
+let carouselDom = document.querySelector('.carousel');
+let SliderDom = carouselDom.querySelector('.carousel .list');
+let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+let timeDom = document.querySelector('.carousel .time');
+
+thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+let timeRunning = 2000;
+let timeAutoNext = 10000000000;
+nextDom.onclick = function(){
+    showSlider('next');    
+}
+
+prevDom.onclick = function(){
+    showSlider('prev');    
+}
+let runTimeOut;
+let runNextAuto = setTimeout(() => {
+    next.click();
+}, timeAutoNext)
+function showSlider(type){
+    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+    let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+    
+    if(type === 'next'){
+        SliderDom.appendChild(SliderItemsDom[0]);
+        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+        carouselDom.classList.add('next');
+    }else{
+        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+        carouselDom.classList.add('prev');
+    }
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
+        carouselDom.classList.remove('next');
+        carouselDom.classList.remove('prev');
+    }, timeRunning);
+
+    clearTimeout(runNextAuto);
+    runNextAuto = setTimeout(() => {
+        next.click();
+    }, timeAutoNext)
+}
+//---Prew 1----//
+{
+let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
+document.querySelectorAll('.containerp .cardp .info').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+document.querySelectorAll('.containerp .cardp .infoex').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+}
+
+//---Prew 2----//
+let preveiwContainer = document.querySelector('.products-preview-tv');
+let previewBox = preveiwContainer.querySelectorAll('.preview-tv');
+document.querySelectorAll('.containerv .cardv .infovan').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+
+//---Prew 3----//
+{
+let preveiwContainer = document.querySelector('.products-preview-m');
+let previewBox = preveiwContainer.querySelectorAll('.preview-m');
+document.querySelectorAll('.itemcard .infom').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+  
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+}
+
+//---Prew 4----//
+{
+let preveiwContainer = document.querySelector('.products-preview-m');
+let previewBox = preveiwContainer.querySelectorAll('.preview-m');
+document.querySelectorAll('.itemcardmc .infom').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+  
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+}
+
+//---Prew 5----//
+{
+let preveiwContainer = document.querySelector('.products-preview-m');
+let previewBox = preveiwContainer.querySelectorAll('.preview-m');
+document.querySelectorAll('.itemcardta .infom').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+  
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+}
+//---Glow Card----//
+VanillaTilt.init(document.querySelector(".tvan"), {
+		max: 5,
+		speed: 100
+});
+
+VanillaTilt.init(document.querySelector(".ls"), {
+		max: 5,
+		speed: 100
+});
+
+VanillaTilt.init(document.querySelector(".contact-left"), {
+		max: 10,
+		speed: 150,
+        perspective: 750
+});
+
+//---Angajare----//
+document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log('Success:', result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+//---Notificare Angajare----//
+document.getElementById('notifyButton').addEventListener('click', function() {
+    var field1 = document.getElementById('field1').value.trim();
+    var field1 = document.getElementById('field2').value.trim();
+    var field1 = document.getElementById('field3').value.trim();
+    var field1 = document.getElementById('field4').value.trim();
+    var field1 = document.getElementById('field5').value.trim();
+    var notification = document.getElementById('notification');
+    
+    if (field1 && field2 && field3 && field4 && field5) {
+        notification.classList.add('show');
+        notification.classList.remove('hidden');
+    } else {
+        notification.classList.remove('show');
+        notification.classList.add('hidden');
+        alert('Completeaza toate campurile !');
+    }
+});
+    </script>
+</body>
+</html>
